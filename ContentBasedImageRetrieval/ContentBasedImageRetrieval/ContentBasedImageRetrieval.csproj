@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DF6538C-ACB0-4C99-A9DD-36C79121B6E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContentBasedImageRetrieval</RootNamespace>
+    <AssemblyName>ContentBasedImageRetrieval</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cbir\ImageDatabase.cs" />
+    <Compile Include="cbir\ImageQuery.cs" />
+    <Compile Include="cbir\signature.cs" />
+    <Compile Include="cbir\YIQ.cs" />
+    <Compile Include="editor\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editor\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\ActionToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\ActionToolWindowControl.Designer.cs">
+      <DependentUpon>ActionToolWindowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\BitmapTools.cs" />
+    <Compile Include="editor\Canvas.cs" />
+    <Compile Include="editor\ColorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\ColorsControl.Designer.cs">
+      <DependentUpon>ColorsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\CursorHelper.cs" />
+    <Compile Include="editor\EditLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editor\EditLayerForm.Designer.cs">
+      <DependentUpon>EditLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\EditModeEnum.cs" />
+    <Compile Include="editor\EnvironmentVariables.cs" />
+    <Compile Include="editor\EraseObject.cs" />
+    <Compile Include="editor\EventMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\EventMonitor.Designer.cs">
+      <DependentUpon>EventMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\Extentions.cs" />
+    <Compile Include="editor\FormCanvas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editor\FormCanvas.Designer.cs">
+      <DependentUpon>FormCanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editor\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\IconInfo.cs" />
+    <Compile Include="editor\Layer.cs" />
+    <Compile Include="editor\LayerChangeEventArgs.cs" />
+    <Compile Include="editor\LayersToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\LayersToolWindowControl.Designer.cs">
+      <DependentUpon>LayersToolWindowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editor\NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editor\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\PencilControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\PencilControl.Designer.cs">
+      <DependentUpon>PencilControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\PencilToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\PencilToolWindowControl.Designer.cs">
+      <DependentUpon>PencilToolWindowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\PreviousProjectItem.cs" />
+    <Compile Include="editor\PreviousProjectItemExt.cs" />
+    <Compile Include="editor\Project.cs" />
+    <Compile Include="editor\ProjectExtentions.cs" />
+    <Compile Include="editor\RoundedButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\RoundedButtonControl.Designer.cs">
+      <DependentUpon>RoundedButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editor\SerializableColor.cs" />
+    <Compile Include="editor\SerializableGraphicPath.cs" />
+    <Compile Include="editor\Settings.cs" />
+    <Compile Include="editor\SettingsExtentions.cs" />
+    <Compile Include="editor\Strip.cs" />
+    <Compile Include="editor\Thumbnail.cs" />
+    <Compile Include="editor\WorkArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editor\WorkArea.Designer.cs">
+      <DependentUpon>WorkArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFastMultiresolutionImageQuerying.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFastMultiresolutionImageQuerying.Designer.cs">
+      <DependentUpon>FormFastMultiresolutionImageQuerying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMatching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMatching.Designer.cs">
+      <DependentUpon>FormMatching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuantityResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuantityResult.Designer.cs">
+      <DependentUpon>FormQuantityResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaarWavelet.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="editor\ActionToolWindowControl.resx">
+      <DependentUpon>ActionToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editor\EventMonitor.resx">
+      <DependentUpon>EventMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editor\FormCanvas.resx">
+      <DependentUpon>FormCanvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editor\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editor\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editor\WorkArea.resx">
+      <DependentUpon>WorkArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFastMultiresolutionImageQuerying.resx">
+      <DependentUpon>FormFastMultiresolutionImageQuerying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMatching.resx">
+      <DependentUpon>FormMatching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuantityResult.resx">
+      <DependentUpon>FormQuantityResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\Eraser23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\move23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\pencil23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\rotatered23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\add23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\RecycleBin23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\settings23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\icon-close-small.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\Palette23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="editor\images\hand23x23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cbir\cbir.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="thumbnail\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,1 +1,1 @@
-# FastMultiresolutionImageQuerying
+Поиск изображений по образцу. C# / Compact SQL 
